@@ -1,0 +1,26 @@
+name: Update spec files
+on:
+  # Allows for manually running an update from the actions tab
+  workflow_dispatch:
+
+  schedule:
+    # Runs every day at ~12am UTC
+    - cron: '0 0 * * *'
+
+# Revoke all default permissions
+permissions: {}
+
+jobs:
+  update:
+    name: update
+    runs-on: ubuntu-latest
+    permissions:
+      # needed to write updated specs to this repo
+      contents: write
+
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - uses: aidandenlinger/autocopr@main  # Not fixing it to a tag/commit because it's my code :)
+        with:
+          mode: "push"
