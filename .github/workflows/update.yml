@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
-      - uses: aidandenlinger/autocopr@main  # Not fixing it to a tag/commit because it's my code :)
+      - uses: aidandenlinger/autocopr@v1 # not fixing to a SHA because it's my code :)
         with:
           mode: "push"
