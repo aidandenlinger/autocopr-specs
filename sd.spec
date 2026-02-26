@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:    sd
-Version: 1.0.0
-Release: 2%{?dist}
+Version: 1.1.0
+Release: 1%{?dist}
 Summary: Intuitive find & replace CLI (sed alternative)
 
 License: MIT
