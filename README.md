@@ -1,3 +1,7 @@
+> [!WARNING]
+> I am deprecating this COPR repo. Do not start using it. I plan on leaving the repo running through Fedora 44 end-of-life, but not supporting any future Fedora versions. I'm still maintaining the core Github Action behind this automated COPR repo at [autocopr](https://github.com/aidandenlinger/autocopr), feel free to look at the Github Action in this repo and fork it to make your own autocopr. You may also want to look at [nix](https://src.fedoraproject.org/rpms/nix) on Fedora and the [home-manager](https://github.com/nix-community/home-manager) project, which is what I used to replace this repo for my personal setup.
+
+
 # AutoCOPR Specs
 
 [![Update spec files](https://github.com/aidandenlinger/autocopr-specs/actions/workflows/update.yml/badge.svg)](https://github.com/aidandenlinger/autocopr-specs/actions/workflows/update.yml)
