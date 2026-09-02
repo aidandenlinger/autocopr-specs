@@ -2,8 +2,8 @@
 
 Name: starship
 Version: 1.26.0
-Release: 1%{?dist}
-Summary: The minimal, blazing-fast, and infinitely customizable prompt for any shell
+Release: 2%{?dist}
+Summary: [THIS COPR IS DEPRECATED] The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
 License: ISC
 URL: https://github.com/starship/starship
@@ -13,6 +13,9 @@ Source1: https://raw.githubusercontent.com/starship/starship/v%{version}/docs/co
 Source2: https://raw.githubusercontent.com/starship/starship/v%{version}/LICENSE
 
 %description
+This COPR repo is deprecated, please migrate to another.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/ for more info.
+
 The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 
 - Fast: it's fast – really really fast! 🚀
@@ -39,6 +42,19 @@ install -p -D %{name} %{buildroot}%{_bindir}/%{name}
 # Shell completions (Fish has built-in completions, see above)
 install -pvD -m 0644 %{name}.bash %{buildroot}%{bash_completions_dir}/%{name}
 install -pvD -m 0644 _%{name} %{buildroot}%{zsh_completions_dir}/_%{name}
+
+%post
+cat << 'EOF'
+==================================================================
+WARNING: The adenl/github-releases Copr repo is DEPRECATED.
+It will not host packages for Fedora 45.
+Automated updates for Fedora 44 will continue
+until Fedora 44 EOL 2027-06-01, but any issues will not be fixed.
+Please migrate to another source to acquire `starship`.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/
+for more info.
+==================================================================
+EOF
 
 %files
 %doc CONFIGURATION.md
