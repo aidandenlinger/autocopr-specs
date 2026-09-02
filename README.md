@@ -3,7 +3,7 @@
 >
 > To stay within DNF, it seems like [Terra](https://terrapkg.com/) is
 > your most up-to-date repository option. It provides `rust-bottom`,
-> `golang-github-jesseduffield-lazygit`, `rust-starship`, and `zellij`.It
+> `golang-github-jesseduffield-lazygit`, `rust-starship`, and `zellij`. It
 > doesn't provide `sd`, but `sd` doesn't seem to have a recommended install
 > option for Fedora. Given that `sd` doesn't have much development, it's likely
 > easiest to build it from source and install it yourself.
