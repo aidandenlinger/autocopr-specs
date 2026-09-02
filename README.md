@@ -83,6 +83,7 @@ work as expected and you will receive updates through the normal dnf mechanism
 ## Removed Packages
 - 11/17/23: `helix` [has been removed from this repo](https://github.com/aidandenlinger/autocopr/commit/dfc973e8dce1294c9883906342fed5a3e21dba86)
   as [it is in the official Fedora repos](https://packages.fedoraproject.org/pkgs/helix/helix/).
+- 9/1/26: `eza` has been removed from this repo as [it is in the official Fedora repos](https://packages.fedoraproject.org/pkgs/rust-eza/eza/).
 
 ## Thanks
 - [VarLad](https://gitlab.com/VarLad/rpm-specs) for writing the original
