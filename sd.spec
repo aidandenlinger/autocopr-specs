@@ -2,14 +2,17 @@
 
 Name:    sd
 Version: 1.1.0
-Release: 1%{?dist}
-Summary: Intuitive find & replace CLI (sed alternative)
+Release: 2%{?dist}
+Summary: [THIS COPR IS DEPRECATED] Intuitive find & replace CLI (sed alternative)
 
 License: MIT
 URL: https://github.com/chmln/sd
 Source: %{url}/releases/download/v%{version}/%{name}-v%{version}-x86_64-unknown-linux-gnu.tar.gz
 
 %description
+This COPR repo is deprecated, please migrate to another.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/ for more info.
+
 sd (search & displace) is an intuitive find & replace CLI.
 
 * Painless regular expressions.
@@ -48,6 +51,19 @@ install -pvD -m 0644 completions/%{name}.fish %{buildroot}%{fish_completions_dir
 
 # Man page
 install -pvD -m 0644 %{name}.1.gz %{buildroot}%{_mandir}/man1/%{name}.1.gz
+
+%post
+cat << 'EOF'
+==================================================================
+WARNING: The adenl/github-releases Copr repo is DEPRECATED.
+It will not host packages for Fedora 45.
+Automated updates for Fedora 44 will continue
+until Fedora 44 EOL 2027-06-01, but any issues will not be fixed.
+Please migrate to another source to acquire `sd`.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/
+for more info.
+==================================================================
+EOF
 
 %files
 %{_bindir}/%{name}
