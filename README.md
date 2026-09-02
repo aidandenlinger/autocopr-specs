@@ -1,6 +1,12 @@
 > [!WARNING]
 > I am deprecating this COPR repo. Do not start using it. I plan on leaving the repo running through Fedora 44 end-of-life, but not supporting any future Fedora versions. I'm still maintaining the core Github Action behind this automated COPR repo at [autocopr](https://github.com/aidandenlinger/autocopr), feel free to look at the Github Action in this repo and fork it to make your own autocopr. You may also want to look at [nix](https://src.fedoraproject.org/rpms/nix) on Fedora and the [home-manager](https://github.com/nix-community/home-manager) project, which is what I used to replace this repo for my personal setup.
-
+>
+> To stay within DNF, it seems like [Terra](https://terrapkg.com/) is
+> your most up-to-date repository option. It provides `rust-bottom`,
+> `golang-github-jesseduffield-lazygit`, `rust-starship`, and `zellij`.It
+> doesn't provide `sd`, but `sd` doesn't seem to have a recommended install
+> option for Fedora. Given that `sd` doesn't have much development, it's likely
+> easiest to build it from source and install it yourself.
 
 # AutoCOPR Specs
 
