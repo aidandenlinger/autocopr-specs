@@ -3,8 +3,8 @@
 
 Name: bottom
 Version: 0.14.9
-Release: 1%{?dist}
-Summary: Yet another cross-platform graphical process/system monitor
+Release: 2%{?dist}
+Summary: [THIS COPR IS DEPRECATED] Yet another cross-platform graphical process/system monitor
 
 License: MIT
 URL: https://github.com/ClementTsang/bottom
@@ -13,6 +13,9 @@ Source1: %{url}/releases/download/%{version}/manpage.tar.gz
 Source2: https://raw.githubusercontent.com/ClementTsang/bottom/%{version}/LICENSE
 
 %description
+This COPR repo is deprecated, please migrate to another.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/ for more info.
+
 A customizable cross-platform graphical process/system monitor for the terminal.
 Supports Linux, macOS, and Windows. Inspired by gtop, gotop, and htop.
 
@@ -34,6 +37,19 @@ install -pvD -m 0644 completion/_%{binary_name} %{buildroot}%{zsh_completions_di
 
 # Manpage
 install -v -p -D -m 0644 %{binary_name}.1.gz %{buildroot}%{_mandir}/man1/%{binary_name}.1.gz
+
+%post
+cat << 'EOF'
+==================================================================
+WARNING: The adenl/github-releases Copr repo is DEPRECATED.
+It will not host packages for Fedora 45.
+Automated updates for Fedora 44 will continue
+until Fedora 44 EOL 2027-06-01, but any issues will not be fixed.
+Please migrate to another source to acquire `bottom`.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/
+for more info.
+==================================================================
+EOF
 
 %files
 %{_bindir}/%{binary_name}
