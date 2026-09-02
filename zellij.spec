@@ -1,9 +1,9 @@
 %global debug_package %{nil}
 
-Name:       zellij
+Name: zellij
 Version: 0.45.1
-Release: 1%{?dist}
-Summary:    A terminal workspace with batteries included
+Release: 2%{?dist}
+Summary: [THIS COPR IS DEPRECATED] A terminal workspace with batteries included
 
 License:    MIT
 URL:        https://github.com/zellij-org/zellij
@@ -11,6 +11,9 @@ Source:     %{url}/releases/download/v%{version}/%{name}-x86_64-unknown-linux-mu
 Source1:    https://raw.githubusercontent.com/zellij-org/zellij/v%{version}/LICENSE.md
 
 %description
+This COPR repo is deprecated, please migrate to another.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/ for more info.
+
 Zellij is a workspace aimed at developers, ops-oriented people and anyone
 who loves the terminal. At its core, it is a terminal multiplexer (similar to
 tmux and screen), but this is merely its infrastructure layer. Zellij includes
@@ -39,6 +42,19 @@ install -p -D %{name} %{buildroot}%{_bindir}/%{name}
 install -pvD -m 0644 %{name}.bash %{buildroot}%{bash_completions_dir}/%{name}
 install -pvD -m 0644 _%{name} %{buildroot}%{zsh_completions_dir}/_%{name}
 install -pvD -m 0644 %{name}.fish %{buildroot}%{fish_completions_dir}/%{name}.fish
+
+%post
+cat << 'EOF'
+==================================================================
+WARNING: The adenl/github-releases Copr repo is DEPRECATED.
+It will not host packages for Fedora 45.
+Automated updates for Fedora 44 will continue
+until Fedora 44 EOL 2027-06-01, but any issues will not be fixed.
+Please migrate to another source to acquire `zellij`.
+See https://copr.fedorainfracloud.org/coprs/adenl/github-releases/
+for more info.
+==================================================================
+EOF
 
 %files
 %{_bindir}/%{name}
