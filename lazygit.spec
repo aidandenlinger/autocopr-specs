@@ -3,8 +3,8 @@
 %global debug_package %{nil}
 
 Name:    lazygit
-Version: 0.64.1
-Release: 2%{?dist}
+Version: 0.65.0
+Release: 1%{?dist}
 Summary: [THIS COPR IS DEPRECATED] simple terminal UI for git commands
 
 License: MIT
