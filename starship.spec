@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name: starship
-Version: 1.26.0
-Release: 2%{?dist}
+Version: 1.27.0
+Release: 1%{?dist}
 Summary: [THIS COPR IS DEPRECATED] The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
 License: ISC
