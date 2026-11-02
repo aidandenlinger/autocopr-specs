@@ -2,8 +2,8 @@
 %global binary_name btm
 
 Name: bottom
-Version: 0.14.9
-Release: 2%{?dist}
+Version: 0.15.0
+Release: 1%{?dist}
 Summary: [THIS COPR IS DEPRECATED] Yet another cross-platform graphical process/system monitor
 
 License: MIT
