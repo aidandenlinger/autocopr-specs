@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name: zellij
-Version: 0.45.1
-Release: 2%{?dist}
+Version: 0.46.0
+Release: 1%{?dist}
 Summary: [THIS COPR IS DEPRECATED] A terminal workspace with batteries included
 
 License:    MIT
